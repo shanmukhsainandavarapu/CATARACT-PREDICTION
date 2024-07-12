@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrystalClear Home</title>
+    <link rel="stylesheet" href={{url_for('static',filename='css/styles.css')}}>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            CrystalClear
+        </div>
+        <div class="nav-items">
+            <a href={{url_for('index')}}>Home</a>
+            <a href="#About">About</a>
+            <a href={{url_for('predictor')}}>Prediction</a>
+            <a href="#Contact">Contact</a>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-container">
+            <div class="column-left">
+                <h1>CRYSTAL CLEAR VISION</h1>
+                <p>Revolutionising cataract prediction through transfer learning mastery.</p>
+                <a href={{url_for('predictor')}}><button>GET STARTED</button></a>
+            </div>
+            <div class="column-right">
+                <img src={{url_for('static',filename='images/homepageImage.svg')}} alt="photo" class="hero-image">
+            </div>
+        </div>
+    </section>
+    <section class="hero" >
+        <div class="hero-container">
+            <div class="column-left">
+                <h1 id="About">ABOUT</h1>
+                <p style="font-size: 1.2rem; line-height: 2rem;">
+                    Welcome to ClearCrystal, your trusted partner in eye health detection using advanced deep learning technology. <br> <br>
+
+Our Mission <br>
+At ClearCrystal, our mission is to harness the power of artificial intelligence to provide accessible, efficient, 
+and accurate eye health assessments. We aim to support both individuals and healthcare professionals in the early detection and diagnosis of cataracts, 
+helping to prevent vision impairment and improve quality of life. <br>
+
+<br> What We Do <br>
+ClearCrystal specializes in detecting cataracts through image analysis. Our platform uses a state-of-the-art deep learning model to differentiate between 
+normal eyes and eyes with cataracts, offering a quick and reliable assessment tool.
+
+                </p>
+                <br><br><br>
+                <h1 id="Contact">CONTACT US</h1>
+                <p style="font-size: 1.2rem; line-height: 2rem;"> We value your feedback and are here to assist you with any questions or concerns.
+                     Feel free to reach out to us through our Contact Page.    
+                </p>
+                
+                <p style="font-size: 1.2rem; line-height: 2rem;">
+                    Email: cataract@team.com <br>
+                    Ph: 9845xxxxxx
+                </p>
+            </div>
+            <div class="column-right">
+                <img src={{url_for('static',filename='images/aboutUsImage.svg')}} alt="" class="hero-image">
+            </div>
+        </div>
+    </section>
+        
+</body>
+</html>

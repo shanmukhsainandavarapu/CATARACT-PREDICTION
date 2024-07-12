@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrystalClear Results</title>
+    <link rel="stylesheet" href={{url_for('static',filename='css/styles.css')}}>
+    <script></script> 
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            CrystalClear
+        </div>
+        <div class="nav-items">
+            <a href={{url_for('index')}}>Home</a>
+            <a href={{url_for('index')}}>About</a>
+            <a href={{url_for('predictor')}}>Prediction</a>
+            <a href={{url_for('index')}}>Contact</a>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-container">
+            <div class="column-left">
+                <h1>RESULTS</h1>
+                <p>Upon examining and evaluating the images, we have concluded the following: </p>
+                <p>{{result}}</p>
+                <!-- <p>Relax! Cataract has NOT been detected. However we advise you to get an eye check-up at your earliest convenience.</p>
+                <p>Cataract has been detected. Kindly book an appointment at the earliest and consult a doctor for confirmation.</p> -->
+                <a href="https://www.apollospectra.com/blog/ophthalmology/reduce-your-risk-of-cataract-by-eating-a-healthy-diet">
+                    <button> BOOK APPOINTMENT NOW</button>
+                </a>
+            </div>
+            <div class="column-right">
+                <img src={{url_for('static',filename='images/resultspageImage.svg')}} alt="photo" class="hero-image">
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrystalClear Predict</title>
+    <link rel="stylesheet" href={{url_for('static',filename='css/styles.css')}}
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            CrystalClear
+        </div>
+        <div class="nav-items">
+            <a href="index.html">Home</a>
+            <a href="index.html#About">About</a>
+            <a href="details.html">Prediction</a>
+            <a href="index.html#Contact">Contact</a>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-container">
+            <div class="column-left">
+                <h1>CATARACT PREDICTION</h1>
+                <p>Predicting cataracts using transfer learning typically involves leveraging pre-trained 
+                    deep learning models on large datasets for image classification tasks.</p>
+                    <form action='/predict' method='post' enctype="multipart/form-data" class="form">
+                    <input type="file" name="image" value="SELECT PHOTO" id="upload_file" accept=".png, .jpg, .jpeg" onchange="loadFile(event)">
+                    <input type="submit" value="Predict Cataract" id="submitBtn" class="form-submit-button" />
+                    
+                    <p><img id="out" width="200"> </p>
+                    <script>
+                        var loadFile=function(event){
+                        var image=document.getElementById('out');
+                        image.src= URL.createObjectURL(event.target.files[0])};
+                    </script>
+                
+                </form>
+                
+            </div>
+            <div class="column-right">
+                <img src={{url_for('static',filename="images/predictionPageImage.svg")}} alt="photo" class="hero-image">
+            </div>
+        </div>
+    </section>   
+</body>
+<footer>    
+   
+</footer>
+</html>
